@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Android删除sd卡文件，更新媒体库，防止0kb文件出现 | 麦房 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Macfang">
+    
+    
+
+    <meta name="description" content="#Android删除sd卡文件，更新媒体库，防止0kb文件出现  最近做了一个清理手机图片的功能，一开始我想的非常简单，清理图片，无非就是删除文件，获取到要清理的filePath，直接执行file.delete，完事儿~所以一开始我的代码是这样的：
+12345678public boolean delete(String path)&amp;#123;  File file = new File(path">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android删除sd卡文件，更新媒体库，防止0kb文件出现 | 麦房">
+<meta property="og:url" content="http://yoursite.com/2016/01/26/2016-01-26-android-delete-sdfile/index.html">
+<meta property="og:site_name" content="麦房">
+<meta property="og:description" content="#Android删除sd卡文件，更新媒体库，防止0kb文件出现  最近做了一个清理手机图片的功能，一开始我想的非常简单，清理图片，无非就是删除文件，获取到要清理的filePath，直接执行file.delete，完事儿~所以一开始我的代码是这样的：
+12345678public boolean delete(String path)&amp;#123;  File file = new File(path">
+<meta property="og:updated_time" content="2016-01-26T13:04:06.544Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android删除sd卡文件，更新媒体库，防止0kb文件出现 | 麦房">
+<meta name="twitter:description" content="#Android删除sd卡文件，更新媒体库，防止0kb文件出现  最近做了一个清理手机图片的功能，一开始我想的非常简单，清理图片，无非就是删除文件，获取到要清理的filePath，直接执行file.delete，完事儿~所以一开始我的代码是这样的：
+12345678public boolean delete(String path)&amp;#123;  File file = new File(path">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+    <link rel="stylesheet" href="/css/highlight.css" type="text/css">
+    <link rel="stylesheet" href="/css/archive.css" type="text/css">
+    <link rel="stylesheet" href="/css/china-social-icon.css" type="text/css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">麦房</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">Android删除sd卡文件，更新媒体库，防止0kb文件出现</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-01-26" class="post-meta__date date">2016-01-26</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>#Android删除sd卡文件，更新媒体库，防止0kb文件出现<br>  最近做了一个清理手机图片的功能，一开始我想的非常简单，清理图片，无非就是删除文件，获取到要清理的filePath，直接执行file.delete，完事儿~所以一开始我的代码是这样的：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="keyword">delete</span>(String path)&#123;</span><br><span class="line">  <span class="keyword">File</span> <span class="keyword">file</span> = <span class="keyword">new</span> <span class="keyword">File</span>(path);</span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">file</span>.exist())&#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="keyword">file</span>.<span class="keyword">delete</span>();</span><br><span class="line">  &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  简单粗暴，然而执行了一下发现可以正常删除Android图库中的图片，但是删除完图片库中会出现一些黑黑的看不到缩略图的图片，猜想是文件已经删除，但是没有更新媒体库导致。网上搜了一下，增加了一个更新媒体库的操作：<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> void scan2MediaStore(Context ctx, <span class="keyword">File</span> <span class="keyword">file</span>) &#123;</span><br><span class="line">      Uri scanFolder = Uri.fromFile(<span class="keyword">file</span>);</span><br><span class="line">      <span class="type">Intent</span> mediaScanIntent = new <span class="type">Intent</span>(<span class="type">Intent</span>.ACTION_MEDIA_SCANNER_SCAN_FILE);</span><br><span class="line">      mediaScanIntent.setData(scanFolder);</span><br><span class="line">      ctx.sendBroadcast(mediaScanIntent);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>  本来以为问题解决，过几天测试提了一个在他手机上删除完还是有黑框框的bug，我在一台mx2上面也重现了。百思不得其解，明明更新媒体库了呀，为啥没更新成功。后来终于在网上找到一篇博文，用一种先删除文件，再更新媒体数据库的方法，解决了这个问题，代码如下：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> deleteMediaDB(<span class="keyword">File</span> <span class="keyword">file</span>)&#123;</span><br><span class="line">   <span class="comment">//执行完file.delete再执行媒体数据库delete，防止出现删完媒体库有显示不出来的图片</span></span><br><span class="line">   WeiyunApplication.getInstance().getContentResolver().<span class="keyword">delete</span>(</span><br><span class="line">                                MediaStore.Images.Media.EXTERNAL_CONTENT_URI,</span><br><span class="line">                                MediaStore.Images.Media.DATA+ <span class="string">" = '"</span> + <span class="keyword">file</span>.getAbsolutePath() + <span class="string">"'"</span>, <span class="keyword">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  就这样，先执行file.delete再执行媒体数据库删除，这样真正地做到了实际文件删除并且更新了媒体库。<br>  本以为问题就这样解决，结果发布前又发现了一个bug。手机连上电脑，拷贝一个文件夹过去，里面有几张图片，然后在终端执行删除操作，发现删完又出现了黑框框，并且在电脑上看，里面文件夹里的图片变成了0kb！！<br>  这个bug困扰了我很久，最后在抽烟区lewis告诉我可以采取先rename再delete的方法试试，我试了一下，果然是可以的！有点奇技淫巧，类似回收站的原理，先把文件移到一个地方，然后再删除。具体代码如下：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="keyword">delete</span>(String path)&#123;</span><br><span class="line">    <span class="keyword">File</span> <span class="keyword">file</span> = <span class="keyword">new</span> <span class="keyword">File</span>(path);</span><br><span class="line">    <span class="keyword">if</span>(!<span class="keyword">file</span>.exist(<span class="keyword">file</span>)) <span class="keyword">return</span>;</span><br><span class="line">    <span class="comment">//这里先rename一个temp文件再做删除，解决某些文件删除后出现0kb文件的情况</span></span><br><span class="line">    <span class="keyword">File</span> temp = <span class="keyword">new</span> <span class="keyword">File</span>(<span class="keyword">file</span>.getAbsolutePath()+<span class="string">".temp"</span>);</span><br><span class="line">    <span class="keyword">File</span> deleteFile = <span class="keyword">file</span>.renameTo(temp) ? temp : <span class="keyword">file</span>;</span><br><span class="line">    <span class="comment">//执行完file.delete再执行媒体数据库delete，防止出现删完媒体库有显示不出来的图片</span></span><br><span class="line">    WeiyunApplication.getInstance().getContentResolver().<span class="keyword">delete</span>(</span><br><span class="line">               MediaStore.Images.Media.EXTERNAL_CONTENT_URI,</span><br><span class="line">               MediaStore.Images.Media.DATA+ <span class="string">" = '"</span> + <span class="keyword">file</span>.getAbsolutePath() + <span class="string">"'"</span>, <span class="keyword">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  完美解决所有问题！以上就是关于Android删除sd卡文件的踩坑记！</p>
+
+  </section>
+
+  
+  
+
+<section class="post-comments">
+
+    <div class="ds-thread" data-thread-key="2016/01/26/2016-01-26-android-delete-sdfile/"></div>
+
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"letian"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script> 
+
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
