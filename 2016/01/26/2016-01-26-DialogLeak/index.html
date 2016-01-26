@@ -3,17 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>2016-01-26-DialogLeak | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="写这篇文章之前，先系统介绍下，怎样用MAT追踪项目里面的内存泄漏。  首先，在怀疑项目里面已经发生内存泄漏后，打开AS的Android Device Monitor     选中项目的进程，这里是com.qq.qcloud。接着点击cause GC，提醒系统进行垃圾回收，然后开始dump hprof。这个过程会有点卡，需要等一会儿。这里用as生成hprof之后，还需要用hprof工具转换一下，才能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2016-01-26-DialogLeak">
+<meta property="og:url" content="http://yoursite.com/2016/01/26/2016-01-26-DialogLeak/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:description" content="写这篇文章之前，先系统介绍下，怎样用MAT追踪项目里面的内存泄漏。  首先，在怀疑项目里面已经发生内存泄漏后，打开AS的Android Device Monitor     选中项目的进程，这里是com.qq.qcloud。接着点击cause GC，提醒系统进行垃圾回收，然后开始dump hprof。这个过程会有点卡，需要等一会儿。这里用as生成hprof之后，还需要用hprof工具转换一下，才能">
+<meta property="og:image" content="http://yoursite.com/./1453433057801.png">
+<meta property="og:image" content="http://yoursite.com/./1453433392760.png">
+<meta property="og:image" content="http://yoursite.com/./1453433892965.png">
+<meta property="og:image" content="http://yoursite.com/./1453433988179.png">
+<meta property="og:image" content="http://yoursite.com/./1453434082524.png">
+<meta property="og:image" content="http://yoursite.com/./1453434193258.png">
+<meta property="og:image" content="http://yoursite.com/./1453434236024.png">
+<meta property="og:updated_time" content="2016-01-26T08:57:40.092Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="2016-01-26-DialogLeak">
+<meta name="twitter:description" content="写这篇文章之前，先系统介绍下，怎样用MAT追踪项目里面的内存泄漏。  首先，在怀疑项目里面已经发生内存泄漏后，打开AS的Android Device Monitor     选中项目的进程，这里是com.qq.qcloud。接着点击cause GC，提醒系统进行垃圾回收，然后开始dump hprof。这个过程会有点卡，需要等一会儿。这里用as生成hprof之后，还需要用hprof工具转换一下，才能">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +67,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-2016-01-26-DialogLeak" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-2016-01-26-DialogLeak" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/26/2016-01-26-DialogLeak/" class="article-date">
   <time datetime="2016-01-26T08:57:02.000Z" itemprop="datePublished">2016-01-26</time>
@@ -74,8 +80,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/26/2016-01-26-DialogLeak/">2016-01-26-DialogLeak</a>
+    <h1 class="article-title" itemprop="name">
+      2016-01-26-DialogLeak
     </h1>
   
 
@@ -117,11 +123,10 @@ public void onActivityCreated(Bundle savedInstanceState) {
     </footer>
   </div>
   
+    
+  
 </article>
 
-
-  
-  
 </section>
         
           <aside id="sidebar">
