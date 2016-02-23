@@ -7,7 +7,7 @@
     
 
     <title>
-      【翻译】安卓冷启动优化 | 麦房 
+      【译】Android冷启动优化 | 麦房 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,34 +16,34 @@
     
     
 
-    <meta name="description" content="翻译一篇外国友人写的blog，供大家看看
+    <meta name="description" content="翻译一篇外国友人写的blog，这篇文章主要分析了android冷启动几个优化方式，让你的app拥有更加生动流畅并且不影响性能的闪屏页。
 有些地方可能翻译的不太好，见谅！
 原文地址：http://saulmm.github.io/avoding-android-cold-starts 
 
-&amp;emsp;&amp;emsp;过去的几周里，安卓开发者论坛里经常出现关于冷启动、闪屏页或者启动页的讨论。在这篇文章里，我将阐述关于以下几个问题我的观点：它们是否必要？如何正确使用它们？怎样改进它们获得更好的用户体">
+&amp;emsp;&amp;emsp;过去的几周里，安卓开发者论坛里经常出现关于冷启动、闪屏页或者启动页的讨论。在这篇文章里，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【翻译】安卓冷启动优化 | 麦房">
+<meta property="og:title" content="【译】Android冷启动优化 | 麦房">
 <meta property="og:url" content="http://yoursite.com/2016/01/26/new/index.html">
 <meta property="og:site_name" content="麦房">
-<meta property="og:description" content="翻译一篇外国友人写的blog，供大家看看
+<meta property="og:description" content="翻译一篇外国友人写的blog，这篇文章主要分析了android冷启动几个优化方式，让你的app拥有更加生动流畅并且不影响性能的闪屏页。
 有些地方可能翻译的不太好，见谅！
 原文地址：http://saulmm.github.io/avoding-android-cold-starts 
 
-&amp;emsp;&amp;emsp;过去的几周里，安卓开发者论坛里经常出现关于冷启动、闪屏页或者启动页的讨论。在这篇文章里，我将阐述关于以下几个问题我的观点：它们是否必要？如何正确使用它们？怎样改进它们获得更好的用户体">
+&amp;emsp;&amp;emsp;过去的几周里，安卓开发者论坛里经常出现关于冷启动、闪屏页或者启动页的讨论。在这篇文章里，">
 <meta property="og:image" content="https://github.com/saulmm/OnboardingSample/blob/master/art/airbnb.gif?raw=true">
 <meta property="og:image" content="https://github.com/saulmm/OnboardingSample/blob/master/art/aliexpress.gif?raw=true">
 <meta property="og:image" content="https://github.com/saulmm/OnboardingSample/blob/master/art/simple.gif?raw=true">
 <meta property="og:image" content="https://github.com/saulmm/OnboardingSample/blob/master/art/center.gif?raw=true">
 <meta property="og:image" content="https://github.com/saulmm/OnboardingSample/blob/master/art/toolbar_placeholder.png?raw=true">
 <meta property="og:image" content="https://github.com/saulmm/OnboardingSample/blob/master/art/placeholder.gif?raw=true">
-<meta property="og:updated_time" content="2016-02-22T16:25:13.431Z">
+<meta property="og:updated_time" content="2016-02-23T02:37:31.973Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【翻译】安卓冷启动优化 | 麦房">
-<meta name="twitter:description" content="翻译一篇外国友人写的blog，供大家看看
+<meta name="twitter:title" content="【译】Android冷启动优化 | 麦房">
+<meta name="twitter:description" content="翻译一篇外国友人写的blog，这篇文章主要分析了android冷启动几个优化方式，让你的app拥有更加生动流畅并且不影响性能的闪屏页。
 有些地方可能翻译的不太好，见谅！
 原文地址：http://saulmm.github.io/avoding-android-cold-starts 
 
-&amp;emsp;&amp;emsp;过去的几周里，安卓开发者论坛里经常出现关于冷启动、闪屏页或者启动页的讨论。在这篇文章里，我将阐述关于以下几个问题我的观点：它们是否必要？如何正确使用它们？怎样改进它们获得更好的用户体">
+&amp;emsp;&amp;emsp;过去的几周里，安卓开发者论坛里经常出现关于冷启动、闪屏页或者启动页的讨论。在这篇文章里，">
     
     
     
@@ -172,7 +172,7 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h1 class="post-title">【翻译】安卓冷启动优化</h1>
+    <h1 class="post-title">【译】Android冷启动优化</h1>
 
     
 
@@ -193,7 +193,7 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <p>翻译一篇外国友人写的blog，供大家看看</p>
+    <p>翻译一篇外国友人写的blog，这篇文章主要分析了android冷启动几个优化方式，让你的app拥有更加生动流畅并且不影响性能的闪屏页。</p>
 <p>有些地方可能翻译的不太好，见谅！</p>
 <p>原文地址：<a href="http://saulmm.github.io/avoding-android-cold-starts" target="_blank" rel="external">http://saulmm.github.io/avoding-android-cold-starts</a> </p>
 <hr>
@@ -201,12 +201,12 @@ classes that you can use:
 <p>&emsp;&emsp;文章中的示例代码可以在<a href="https://github.com/saulmm/onboarding-examples-android" target="_blank" rel="external">这里</a>找到。</p>
 <h3 id="u95EA_u5C4F_u9875_u3001_u6B22_u8FCE_u9875_u548C_u51B7_u542F_u52A8"><a href="#u95EA_u5C4F_u9875_u3001_u6B22_u8FCE_u9875_u548C_u51B7_u542F_u52A8" class="headerlink" title="闪屏页、欢迎页和冷启动"></a>闪屏页、欢迎页和冷启动</h3><p>&emsp;&emsp;在这条<a href="https://plus.google.com/u/0/+ColtMcAnlis/posts/4VUCWXXbZUy" target="_blank" rel="external">说说</a>里，开发者Colt McAnlis再次引起了关于安卓闪屏页的讨论，并且分享了一份Cyril Mottier写的keynote，阐述了为什么我们要尽量避免使用闪屏页（破环用户体验、增加了应用大小等等）。</p>
 <p>&emsp;&emsp;实际上，用户肯定想尽快看到app的内容，但是不可避免地，当我们启动一个app时，安卓系统会创建新的进程，在这个加载时间内会显示应用主题的出黑（白）屏，或者跟入口Activity主题一致的空白页面。随着app越来越庞大复杂，这个加载时间还会越来越长。</p>
-<p><img src="https://github.com/saulmm/OnboardingSample/blob/master/art/airbnb.gif?raw=true" alt="图中airbnb就在初始化时有个短暂的空白屏╮(╯——╰)╭"></p>
-<p><em>图中airbnb就在初始化时有个短暂的空白屏╮(╯——╰)╭</em></p>
+<p><img src="https://github.com/saulmm/OnboardingSample/blob/master/art/airbnb.gif?raw=true" alt=""></p>
+<p><em>图中airbnb就在初始化时有个短暂的空白屏</em></p>
 <p>&emsp;&emsp;种种原因，黑（白）屏并不是用户希望看到的。如果进入应用的时候初始化时间过长（数据还没有加载出来），我们应该用一些默认的图片字符先填充进去。如果嫌工作量大，另一种方法，展示应用的logo（还可以加强应用的品牌化哟~）</p>
 <p><img src="https://github.com/saulmm/OnboardingSample/blob/master/art/aliexpress.gif?raw=true" alt=""></p>
 <p><em>图为aliexpress在初始化时展示logo</em></p>
-<h3 id="u4F60_u7684_u597D_u53CBwindowBackground_u5DF2_u4E0A_u7EBF"><a href="#u4F60_u7684_u597D_u53CBwindowBackground_u5DF2_u4E0A_u7EBF" class="headerlink" title="你的好友windowBackground已上线"></a>你的好友windowBackground已上线</h3><p>&emsp;&emsp;就像我们前面说的，进程加载时window manager展示给我们的是一个使用应用主题的window（就是说该窗口的背景状态栏等主题因素会跟随应用主题，译者注）。这个主题一般是通过android：windowBackground这个值设置。按照<a href="https://plus.google.com/+AndroidDevelopers/posts/Z1Wwainpjhd" target="_blank" rel="external">lan Lake这篇文章</a>的说法，如果我们在这个属性中设置<layer-list>并且带上主界面的背景颜色，中间显示一张小图片，我们可以看到下面这种效果：</layer-list></p>
+<h3 id="u4F60_u7684_u597D_u53CBwindowBackground_u5DF2_u4E0A_u7EBF_uFF01"><a href="#u4F60_u7684_u597D_u53CBwindowBackground_u5DF2_u4E0A_u7EBF_uFF01" class="headerlink" title="你的好友windowBackground已上线！"></a>你的好友windowBackground已上线！</h3><p>&emsp;&emsp;就像我们前面说的，进程加载时windowmanager展示给我们的是一个使用应用主题的window。这个主题一般是通过android：windowBackground这个值设置。按照<a href="https://plus.google.com/+AndroidDevelopers/posts/Z1Wwainpjhd" target="_blank" rel="external">lan Lake这篇文章</a>的说法，如果我们在这个属性中设置<layer-list>并且带上主界面的背景颜色，中间显示一张小图片，我们可以看到下面这种效果：</layer-list></p>
 <p><img src="https://github.com/saulmm/OnboardingSample/blob/master/art/simple.gif?raw=true" alt=""></p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;layer-list 
@@ -220,7 +220,7 @@ android:opacity=&quot;opaque&quot;&gt;
         android:src=&quot;@drawable/img_pizza&quot;/&gt;
 &lt;/item&gt;
 &lt;/layer-list&gt;
-</code></pre><p>&emsp;&emsp;我们要谨记这些问题：<layer-list>必须要设置成不透明（android：opacity=“opaque”），还有应用主Activity的父布局的背景要用一种颜色给填充起来，不然<layer-list>里面设置的颜色可能会有残留。</layer-list></layer-list></p>
+</code></pre><p>&emsp;&emsp;我们要谨记这些问题：&lt; layer-list &gt;必须要设置成不透明（android：opacity=“opaque”），还有应用主Activity的父布局的背景要用一种颜色给填充起来，不然&lt; layer-list &gt;里面设置的颜色可能会有残留。</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;LinearLayout
 xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
@@ -239,14 +239,23 @@ android:background=&quot;@color/grey&quot;
 &lt;/LinearLayout&gt;
 </code></pre><h3 id="u4E2A_u6027_u5316_u4F60_u7684_u5F15_u5BFC_u9875_u9762"><a href="#u4E2A_u6027_u5316_u4F60_u7684_u5F15_u5BFC_u9875_u9762" class="headerlink" title="个性化你的引导页面"></a>个性化你的引导页面</h3><p>&emsp;&emsp;好好利用windowBackground可以很好地丰富应用的用户体验。如果应用很复杂，或者在开始的时候需要进入登录页或者带有一些选项的页面，我们可以用图片相同的锚点并且加点动画让它达到更加炫酷的效果。</p>
 <p>&emsp;&emsp;举个栗子：<br><img src="https://github.com/saulmm/OnboardingSample/blob/master/art/center.gif?raw=true" alt=""></p>
-<p>&emsp;&emsp;这个动画的实现是位移了一个内容是相同<layer-list>资源的图片。</layer-list></p>
+<p>&emsp;&emsp;这个动画的实现是位移了一个内容是相同&lt; layer-list &gt;资源的图片。</p>
 <pre><code>ViewCompat.animate(logoImageView)
 .translationY(-250)
 .setStartDelay(STARTUP_DELAY)
 .setDuration(ANIM_ITEM_DURATION).setInterpolator(
      new DecelerateInterpolator(1.2f)).start();
 </code></pre><p>&emsp;&emsp;这个imageview在屏幕中心稍往上一点，这会受到系统操作栏的影响，我把他们的为marginTop设置为12dp，正好是系统状态栏高度的一半。</p>
-<h3 id="u4E2A_u6027_u5316_u4F60_u7684_u9ED8_u8BA4_u586B_u5145_u5185_u5BB9"><a href="#u4E2A_u6027_u5316_u4F60_u7684_u9ED8_u8BA4_u586B_u5145_u5185_u5BB9" class="headerlink" title="个性化你的默认填充内容"></a>个性化你的默认填充内容</h3><p>&emsp;&emsp;使用<layer-list>标签我们也可以创建一个默认填充内容用来短暂代替我们将要加载出来的内容。打个比方，我们可以模拟一个工具栏。</layer-list></p>
+<pre><code>&lt;ImageView
+android:id=&quot;@+id/img_logo&quot;
+android:layout_width=&quot;wrap_content&quot;
+android:layout_height=&quot;wrap_content&quot;
+android:layout_gravity=&quot;center&quot;
+android:layout_marginTop=&quot;12dp&quot;
+android:src=&quot;@drawable/img_face&quot;
+tools:visibility=&quot;gone&quot;
+/&gt;
+</code></pre><h3 id="u4E2A_u6027_u5316_u4F60_u7684_u9ED8_u8BA4_u586B_u5145_u5185_u5BB9"><a href="#u4E2A_u6027_u5316_u4F60_u7684_u9ED8_u8BA4_u586B_u5145_u5185_u5BB9" class="headerlink" title="个性化你的默认填充内容"></a>个性化你的默认填充内容</h3><p>&emsp;&emsp;使用&lt; layer-list &gt;标签我们也可以创建一个默认填充内容用来短暂代替我们将要加载出来的内容。打个比方，我们可以模拟一个工具栏。</p>
 <p><img src="https://github.com/saulmm/OnboardingSample/blob/master/art/toolbar_placeholder.png?raw=true" alt=""></p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;layer-list
@@ -267,7 +276,7 @@ android:opacity=&quot;opaque&quot;
     &lt;/shape&gt;
 &lt;/item&gt;
 &lt;/layer-list&gt;
-</code></pre><p>&emsp;&emsp;在这个例子里面，第二个<item>模拟了应用里面的工具栏。我们甚至可以拉长这个工具栏（当然不要超过宽度）然后加一些动画效果让它看起来更加炫酷，如下：</item></p>
+</code></pre><p>&emsp;&emsp;在这个例子里面，第二个&lt; item &gt;模拟了应用里面的工具栏。我们甚至可以拉长这个工具栏（当然不要超过宽度）然后加一些动画效果让它看起来更加炫酷，如下：</p>
 <p><img src="https://github.com/saulmm/OnboardingSample/blob/master/art/placeholder.gif?raw=true" alt=""></p>
 <pre><code>private void collapseToolbar() {
 int toolBarHeight;
